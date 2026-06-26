@@ -23,7 +23,7 @@ ontology.md        # project-specific entities, terms, relationships, and distin
 architecture.md    # current and target structure, components, data flow, dependencies, constraints
 design.md          # product/design language, UX principles, interfaces, and communication patterns
 sources.md         # recoverable source artifacts and their authority
- decisions.md      # durable decisions with reasons, alternatives, date, status, and scope
+decisions.md       # durable decisions with reasons, alternatives, date, status, and scope
 open_questions.md  # known unknowns that must not be filled by inference
 roadmap.md         # staged desired outcomes and sequencing
 log.md             # chronological project updates and reconciliation notes
