@@ -1,20 +1,66 @@
+---
+type: Entry Point
+title: project
+description: Runtime-neutral project operating-unit package for source-grounded human-agent collaboration.
+tags: [project, operating-unit, source-grounding, documentation, handoff, okf]
+okf_version: "0.1"
+status: draft
+---
+
 # project
 
-A public package for defining a project as an operating unit for human + AI collaboration.
+`project` is the project operating-unit package for a runtime-neutral knowledge operating system for human-agent collaboration.
 
-## Premise
+It defines doctrine, templates, and interrogation procedures for turning vague project intent into durable, source-grounded operating knowledge.
 
-Agents need more than a prompt and a repo. They need a source-grounded model of the project they are working inside.
+This repository is not a private project vault. It does not contain project-specific facts. It defines the reusable structure that a private or project-specific instance can later instantiate.
 
-`project` defines the doctrine, templates, and interrogation procedures for turning vague project intent into durable operating knowledge.
+The current GitHub namespace is only a publishing location. It is not the project name.
+
+## Purpose
+
+Agents need more than a prompt and a repository URL. They need a source-grounded model of the project they are working inside.
+
+A project package should help agents understand:
+
+```text
+what the project is for
+what exists now
+what target state is being pursued
+what terms mean
+what sources are authoritative
+what decisions have been made
+what remains unknown
+what happened last
+where work should continue
+```
 
 ## What a project means here
 
-A project is an operating unit with goals, sources, constraints, architecture, decisions, open questions, memory, and handoffs.
+A project is an operating unit.
 
-A project is not just a repository. It may include code, documents, designs, deployments, conversations, decisions, assets, research, and external references.
+It may include:
+
+```text
+code
+documents
+design files
+deployments
+conversations
+decisions
+assets
+research
+external references
+source indexes
+logs
+handoffs
+```
+
+A project is not just a repository. A repository may be one source artifact inside a larger project.
 
 ## Core project files
+
+A project instance may contain:
 
 ```text
 vision.md          # the shortest stable statement of what the project exists to make true
@@ -30,15 +76,25 @@ log.md             # chronological project updates and reconciliation notes
 handoff.md         # structured continuity package for another agent or human
 ```
 
+These files are templates until instantiated. Template language is not project knowledge.
+
+## Relationship to OKF
+
+This repository should be maintained as an OKF-compatible knowledge bundle.
+
+Concept documents should use Markdown with YAML frontmatter. `index.md` files should provide progressive disclosure. `log.md` files should record meaningful changes. Cross-links should connect related concepts. Citations should be used when factual claims depend on external sources.
+
+OKF is the carrier format. Project is the operating-unit model.
+
 ## Public template vs. private instance
 
-This repository should contain reusable doctrine, schemas, templates, and examples.
+This repository should contain reusable doctrine, schemas, templates, examples, and procedures.
 
-It should not contain private project facts.
+It must not contain private project facts.
 
 ```text
 project template
-→ agent-guided grilling and source review
+→ agent-guided interrogation and source review
 → project-specific operating memory
 ```
 
@@ -52,7 +108,7 @@ Replace template material only with:
 2. explicit human answers;
 3. labeled assumptions;
 4. open questions;
-5. documented decisions.
+5. documented decisions with reasons and scope.
 
 A source artifact outranks memory. A claim without evidence remains a claim.
 
@@ -71,7 +127,7 @@ The agent should:
 7. preserve unknowns in `open_questions.md` instead of guessing;
 8. update docs as understanding crystallizes.
 
-## ADR rule
+## Decision rule
 
 Do not create decision records for every preference.
 
@@ -81,12 +137,53 @@ Create a decision record only when:
 2. future readers would not understand the choice without context;
 3. real alternatives existed.
 
-## Relationship to teleology
+## Relationship to other packages
 
-`teleology` defines what the collaboration is for.
+```text
+teleology = defines what the collaboration is for and how truth, authority, and memory should be handled
+identity  = defines who or what is participating
+project   = defines the operating unit where work happens
+skills    = defines reusable procedures
+agents    = composes doctrine, identity, skills, tools, prompts, scripts, and loops
+operator  = installs, updates, audits, and exports packages into runtimes
+```
 
-`project` defines the operating unit where that purpose becomes concrete work.
+Project instances may consume teleology, identity, skills, agents, and operator procedures. The project package should not redefine them.
+
+## Public boundary
+
+This repository may contain:
+
+```text
+general project doctrine
+project schemas
+project templates
+source-review procedures
+decision-recording procedures
+handoff templates
+anonymized examples
+```
+
+It must not contain:
+
+```text
+private project memory
+private source paths
+client-sensitive facts
+private decisions
+runtime secrets
+private handoffs
+product-specific operational state
+```
+
+## Quality rule
+
+A file belongs here only if it helps agents instantiate, understand, continue, or verify project work.
+
+Keep material that clarifies project purpose, scope, ontology, architecture, sources, decisions, open questions, logs, or handoffs.
+
+Remove material that is generic, redundant, decorative, project-specific, or unable to improve future project continuity.
 
 ## Status
 
-Early vocabulary and ontology work.
+Draft. The immediate goal is to define the reusable project operating-unit package without leaking private project instances or runtime-specific assumptions into public doctrine.
