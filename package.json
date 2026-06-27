@@ -1,0 +1,26 @@
+{
+  "name": "architectonic-project",
+  "version": "0.1.0",
+  "description": "Runtime-neutral project operating-unit package for source-grounded human-agent collaboration.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "architectonic-project": "./bin/architectonic-project.js"
+  },
+  "files": [
+    "bin",
+    "doctrine",
+    "AGENTS.md",
+    "index.md",
+    "README.md",
+    "START_HERE.md"
+  ],
+  "keywords": [
+    "project",
+    "documentation",
+    "source-grounding",
+    "handoff",
+    "okf",
+    "architectonic"
+  ]
+}
