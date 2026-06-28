@@ -17,6 +17,12 @@ Install it with:
 npx architectonic add project
 ```
 
+Optional addon for teams that want explicit corpus campaigns:
+
+```bash
+npx architectonic add living-knowledge
+```
+
 It defines doctrine, templates, and interrogation procedures for turning vague project intent into durable, source-grounded operating knowledge.
 
 This repository is not a private project vault. It does not contain project-specific facts. It defines the reusable structure that a private or project-specific instance can later instantiate.
@@ -137,6 +143,7 @@ project      = defines the operating unit where work happens
 skills       = defines reusable procedures
 knowledge    = stores the disclosed corpus of knowledge and evidence
 meta         = stores upkeep and self-improvement procedures
+living-knowledge = optional addon for campaign-based maintenance of the knowledge corpus
 ```
 
 Project instances may consume doctrine, identity, skills, knowledge, meta, and runtime procedures. The project package should not redefine them.
