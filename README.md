@@ -2,24 +2,28 @@
 type: Entry Point
 title: project
 description: Runtime-neutral project operating-unit package for source-grounded human-agent collaboration.
-tags: [project, operating-unit, source-grounding, documentation, handoff, okf]
+tags: [project, operating-unit, source-grounding, stakeholders, decisions, handoff, okf]
 okf_version: "0.1"
 status: draft
 ---
 
 # project
 
-`project` is the project operating-unit package for a runtime-neutral knowledge operating system for human-agent collaboration.
+`project` is the operating-unit package for an Architectonic constitution.
+
+Install it with:
+
+```bash
+npx architectonic add project
+```
 
 It defines doctrine, templates, and interrogation procedures for turning vague project intent into durable, source-grounded operating knowledge.
 
 This repository is not a private project vault. It does not contain project-specific facts. It defines the reusable structure that a private or project-specific instance can later instantiate.
 
-The current GitHub namespace is only a publishing location. It is not the project name.
-
 ## Purpose
 
-Agents need more than a prompt and a repository URL. They need a source-grounded model of the project they are working inside.
+Agents need more than a prompt and a repository URL. They need a source-grounded model of the operating unit they are working inside.
 
 A project package should help agents understand:
 
@@ -29,6 +33,9 @@ what exists now
 what target state is being pursued
 what terms mean
 what sources are authoritative
+who the relevant stakeholders are
+who can decide, approve, or stop
+what incentives, costs, risks, and benefits matter
 what decisions have been made
 what remains unknown
 what happened last
@@ -54,6 +61,9 @@ external references
 source indexes
 logs
 handoffs
+artifacts
+stakeholders
+risks
 ```
 
 A project is not just a repository. A repository may be one source artifact inside a larger project.
@@ -64,39 +74,18 @@ A project instance may contain:
 
 ```text
 vision.md          # the shortest stable statement of what the project exists to make true
-project_profile.md # purpose, scope, users, source repositories, status, and boundaries
+project.md         # purpose, scope, users, source repositories, status, and boundaries
 ontology.md        # project-specific entities, terms, relationships, and distinctions
-architecture.md    # current and target structure, components, data flow, dependencies, constraints
-design.md          # product/design language, UX principles, interfaces, and communication patterns
 sources.md         # recoverable source artifacts and their authority
 decisions.md       # durable decisions with reasons, alternatives, date, status, and scope
 open_questions.md  # known unknowns that must not be filled by inference
-roadmap.md         # staged desired outcomes and sequencing
 log.md             # chronological project updates and reconciliation notes
 handoff.md         # structured continuity package for another agent or human
 ```
 
+Optional sections or expanded files may cover architecture, design, stakeholders, incentives, authority, risks, and artifact policy. Do not create these as separate files unless they will be actively maintained.
+
 These files are templates until instantiated. Template language is not project knowledge.
-
-## Relationship to OKF
-
-This repository should be maintained as an OKF-compatible knowledge bundle.
-
-Concept documents should use Markdown with YAML frontmatter. `index.md` files should provide progressive disclosure. `log.md` files should record meaningful changes. Cross-links should connect related concepts. Citations should be used when factual claims depend on external sources.
-
-OKF is the carrier format. Project is the operating-unit model.
-
-## Public template vs. private instance
-
-This repository should contain reusable doctrine, schemas, templates, examples, and procedures.
-
-It must not contain private project facts.
-
-```text
-project template
-→ agent-guided interrogation and source review
-→ project-specific operating memory
-```
 
 ## Instantiation rule
 
@@ -125,7 +114,8 @@ The agent should:
 5. record resolved vocabulary in `ontology.md`;
 6. record hard-to-reverse tradeoffs in `decisions.md`;
 7. preserve unknowns in `open_questions.md` instead of guessing;
-8. update docs as understanding crystallizes.
+8. identify stakeholders, authority, incentives, risks, and artifact ownership when they affect shared work;
+9. update docs as understanding crystallizes.
 
 ## Decision rule
 
@@ -140,15 +130,16 @@ Create a decision record only when:
 ## Relationship to other packages
 
 ```text
-teleology = defines what the collaboration is for and how truth, authority, and memory should be handled
-identity  = defines who or what is participating
-project   = defines the operating unit where work happens
-skills    = defines reusable procedures
-agents    = composes doctrine, identity, skills, tools, prompts, scripts, and loops
-operator  = installs, updates, audits, and exports packages into runtimes
+constitution = root scaffold that composes Architectonic layers
+doctrine     = defines governing principles, epistemology, ontology, ethics, governance, and oikonomia
+identity     = defines who or what is participating
+project      = defines the operating unit where work happens
+skills       = defines reusable procedures
+knowledge    = stores the disclosed corpus of knowledge and evidence
+meta         = stores upkeep and self-improvement procedures
 ```
 
-Project instances may consume teleology, identity, skills, agents, and operator procedures. The project package should not redefine them.
+Project instances may consume doctrine, identity, skills, knowledge, meta, and runtime procedures. The project package should not redefine them.
 
 ## Public boundary
 
@@ -178,12 +169,10 @@ product-specific operational state
 
 ## Quality rule
 
-A file belongs here only if it helps agents instantiate, understand, continue, or verify project work.
+A file belongs here only if it helps agents build and preserve source-grounded project understanding.
 
-Keep material that clarifies project purpose, scope, ontology, architecture, sources, decisions, open questions, logs, or handoffs.
-
-Remove material that is generic, redundant, decorative, project-specific, or unable to improve future project continuity.
+Remove material that is generic, stale, redundant, or likely to become template sludge.
 
 ## Status
 
-Draft. The immediate goal is to define the reusable project operating-unit package without leaking private project instances or runtime-specific assumptions into public doctrine.
+Draft. The immediate goal is to define a minimal operating-unit model without turning every possible concern into a default file.
