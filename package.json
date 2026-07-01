@@ -4,6 +4,13 @@
   "description": "Runtime-neutral project operating-unit package for source-grounded human-agent collaboration.",
   "license": "Apache-2.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/architectonic/project.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "doctrine",
     "AGENTS.md",
