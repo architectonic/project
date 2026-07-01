@@ -4,11 +4,7 @@
   "description": "Runtime-neutral project operating-unit package for source-grounded human-agent collaboration.",
   "license": "Apache-2.0",
   "type": "module",
-  "bin": {
-    "architectonic-project": "./bin/architectonic-project.js"
-  },
   "files": [
-    "bin",
     "doctrine",
     "AGENTS.md",
     "index.md",
