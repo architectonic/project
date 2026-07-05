@@ -2,7 +2,7 @@
 type: Entry Point
 title: Start Here
 description: First-run traversal guide for agents using the project operating-unit bundle.
-tags: [start-here, project, source-grounding, okf]
+tags: [start-here, project, source-grounding, spec-driven-development, okf]
 okf_version: "0.1"
 status: draft
 ---
@@ -19,7 +19,9 @@ This is the first-run guide for agents reading `project`.
 4. Read `doctrine/index.md` for available doctrine concepts.
 5. Read `doctrine/project.md` to understand project as operating unit.
 6. Read `doctrine/source-grounding.md` before writing project-native claims.
-7. Read `doctrine/decisions.md`, `doctrine/open-questions.md`, or `doctrine/handoff.md` when relevant.
+7. Read `doctrine/spec-driven-development.md` before durable feature, refactor, installer, or runtime work.
+8. Read `doctrine/decisions.md`, `doctrine/open-questions.md`, or `doctrine/handoff.md` when relevant.
+9. Use `templates/feature-spec.md`, `templates/implementation-plan.md`, and `templates/tasks.md` when a task needs executable specification structure.
 
 ## Project Chain of Truth
 
@@ -42,3 +44,11 @@ Read → Classify → Inspect → Plan → Act → Verify → Reconcile → Hand
 ```
 
 Use this loop for all durable changes.
+
+## Spec-Driven Loop
+
+```text
+Intent → Clarification → Specification → Plan → Research → Contracts/Data Model → Tasks → Implementation → Verification → Reconciliation → Handoff
+```
+
+Use this loop when vague intent must become executable project work.
