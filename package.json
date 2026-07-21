@@ -1,7 +1,7 @@
 {
   "name": "architectonic-project",
-  "version": "0.1.2",
-  "description": "Runtime-neutral project operating-unit package for source-grounded human-agent collaboration.",
+  "version": "0.2.0",
+  "description": "Project operating-unit layer for source-grounded human–agent collaboration.",
   "license": "Apache-2.0",
   "type": "module",
   "repository": {
@@ -12,20 +12,26 @@
     "access": "public"
   },
   "files": [
+    "README.md",
+    "CHANGELOG.md",
+    "architectonic.protocol.json",
     "doctrine",
     "templates",
     "AGENTS.md",
     "index.md",
-    "README.md",
-    "START_HERE.md"
+    "START_HERE.md",
+    "scripts"
   ],
+  "scripts": {
+    "validate": "node scripts/validate-package.mjs",
+    "test": "npm run validate"
+  },
   "keywords": [
+    "architectonic",
     "project",
-    "documentation",
-    "source-grounding",
-    "spec-driven-development",
-    "handoff",
-    "okf",
-    "architectonic"
+    "human-ai",
+    "agents",
+    "provenance",
+    "governance"
   ]
 }
