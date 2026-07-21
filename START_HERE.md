@@ -1,54 +1,38 @@
 ---
 type: Entry Point
 title: Start Here
-description: First-run traversal guide for agents using the project operating-unit bundle.
-tags: [start-here, project, source-grounding, spec-driven-development, okf]
-okf_version: "0.1"
-status: draft
+description: First-run traversal guide for the project operating-unit layer.
+tags: [project, source-grounding, decisions, unknowns, handoff]
+protocol_version: "0.2.0"
+status: experimental
 ---
 
 # Start Here
 
-This is the first-run guide for agents reading `project`.
+Use this package to turn a concrete unit of work into durable, source-grounded operating knowledge.
 
-## First Run
+## Read order
 
 1. Read `AGENTS.md` for repository rules.
-2. Read `README.md` for package purpose and boundaries.
+2. Read `README.md` for the layer boundary.
 3. Read `index.md` for progressive disclosure.
-4. Read `doctrine/index.md` for available doctrine concepts.
-5. Read `doctrine/project.md` to understand project as operating unit.
-6. Read `doctrine/source-grounding.md` before writing project-native claims.
-7. Read `doctrine/spec-driven-development.md` before durable feature, refactor, installer, or runtime work.
-8. Read `doctrine/decisions.md`, `doctrine/open-questions.md`, or `doctrine/handoff.md` when relevant.
-9. Use `templates/feature-spec.md`, `templates/implementation-plan.md`, and `templates/tasks.md` when a task needs executable specification structure.
+4. Read `doctrine/source-grounding.md` before writing project-native claims.
+5. Read `doctrine/spec-driven-development.md` before durable feature, refactor, installer, or runtime work.
+6. Read the relevant decision, open-question, risk, source, or handoff contract.
+7. Inspect the current source artifacts and callers affected by the task.
 
-## Project Chain of Truth
+## Chain of truth
 
 ```text
-Memory or prior chat = hints
-Project knowledge = curated index and operating context
-Source artifacts = truth
+prior chat or memory   hints
+curated project files  operating context
+current source artifacts and runtime evidence  source truth
 ```
 
-## Project-Native Gathering Rule
-
-Project-native knowledge requires source review or explicit interview.
-
-Do not infer project truth from memory alone.
-
-## Canonical Loop
+## Operating loop
 
 ```text
-Read → Classify → Inspect → Plan → Act → Verify → Reconcile → Handoff
+Read -> classify -> inspect -> plan -> act -> verify -> reconcile -> hand off
 ```
 
-Use this loop for all durable changes.
-
-## Spec-Driven Loop
-
-```text
-Intent → Clarification → Specification → Plan → Research → Contracts/Data Model → Tasks → Implementation → Verification → Reconciliation → Handoff
-```
-
-Use this loop when vague intent must become executable project work.
+A template is not project knowledge. Instantiate it only from recoverable sources, explicit authorized answers, labeled assumptions, known unknowns, and documented decisions.
