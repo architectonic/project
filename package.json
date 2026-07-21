@@ -1,6 +1,6 @@
 {
   "name": "architectonic-project",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Project operating-unit layer for source-grounded human–agent collaboration.",
   "license": "Apache-2.0",
   "type": "module",
@@ -20,6 +20,7 @@
     "AGENTS.md",
     "index.md",
     "START_HERE.md",
+    "STANDALONE.md",
     "scripts"
   ],
   "scripts": {
