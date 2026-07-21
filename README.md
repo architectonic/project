@@ -1,36 +1,26 @@
-# Projects
+# Project
 
-> **Status: experimental, pre-1.0.** This package defines one layer of the Architectonic protocol. Evaluate it through its canonical contract, package validator, conformance manifest, and explicit limitations.
+> **Status: experimental, pre-1.0.** This package provides source-grounded project structure and procedures. Templates are not project facts until instantiated from sources, explicit decisions, labeled assumptions, or preserved unknowns.
 
-`project` turns vague intent into a bounded operating context with sources, decisions, risks, unknowns, plans, and continuity.
-
-## What it gives an agent
-
-- one predictable home for this concern;
-- a canonical entry that can be found through `architectonic map`;
-- a machine-readable `architectonic.protocol.json`;
-- boundaries that prevent neighboring layers from silently owning the same concept;
-- package validation that runs against both the source checkout and the exact npm tarball.
-
-## Canonical entry
-
-```text
-START_HERE.md
-```
-
-## Boundary
-
-A project is broader than a repository, and public templates are not private project knowledge until instantiated from evidence or explicit decisions.
-
-## Install
+A project is a **standalone bounded operating unit**, not merely a repository and not a subordinate object that requires an organization.
 
 ```bash
-npx architectonic@latest add project --source npm
-npx architectonic@latest verify
+npx architectonic@latest init my-project --preset project --source npm
 ```
 
-Installing a layer provides reusable public structure. Organization-specific facts, private knowledge, credentials, runtime state, and local decisions belong only in controlled workspace instances.
+Use it for:
 
-## Claims
+- purpose, scope, users, and success conditions;
+- canonical sources and current architecture;
+- decisions, risks, assumptions, and open questions;
+- status, roadmap, tasks, verification, reconciliation, and handoff.
 
-This package claims only that its declared structure and validators are inspectable and reproducible. It does not claim universal performance improvement or domain correctness.
+Promote to `project-system` when the project also needs its own knowledge corpus, reusable procedures, and upkeep:
+
+```bash
+npx architectonic@latest init my-project --preset project-system --source npm
+```
+
+Neither profile requires constitution or identity. Add organization governance or actor authority only when the project actually depends on those boundaries.
+
+See [`STANDALONE.md`](./STANDALONE.md) and [`START_HERE.md`](./START_HERE.md).
