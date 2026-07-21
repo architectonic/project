@@ -1,5 +1,7 @@
 # Project
 
+**Architectonic layer:** [main CLI and adaptive profiles](https://github.com/architectonic/architectonic)
+
 > **Status: experimental, pre-1.0.** This package provides source-grounded project structure and procedures. Templates are not project facts until instantiated from sources, explicit decisions, labeled assumptions, or preserved unknowns.
 
 A project is a **standalone bounded operating unit**, not merely a repository and not a subordinate object that requires an organization.
