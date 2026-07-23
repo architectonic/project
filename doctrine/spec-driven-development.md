@@ -69,6 +69,13 @@ handoff                      # continuity package for the next actor
 
 Do not collapse these roles into a single transcript. Separation is what lets later agents audit intent, technical translation, and execution independently.
 
+These artifacts describe a bounded change. They are not the project-wide live work
+authority. When Rail is installed, a Rail item selects and tracks the change and
+links to the relevant specification, plan, and task artifacts. The task artifact
+may retain fine-grained implementation checkboxes, but live ownership, state,
+cross-work dependencies, and completion evidence belong only to the named Rail
+ledger.
+
 ## Specification Rules
 
 A specification should describe the what and why before the how.
@@ -167,6 +174,9 @@ Example shape:
 
 Tasks that touch the same file, depend on the same migration, or mutate the same public contract are not parallel even if they look independent.
 
+Do not promote a task file into a second backlog. Rail answers “what is live and
+who owns it?”; this artifact answers “how is this bounded change decomposed?”
+
 ## Gate Rules
 
 Use gates before implementation, after design, and before handoff.
@@ -225,6 +235,9 @@ open question remains
 ```
 
 Convergence is how project memory avoids becoming a stale promise.
+When Rail is bound, record the live outcome and evidence on the corresponding Rail
+item. Handoffs and reconciliation notes may point to that item but must not shadow
+its status.
 
 ## Relationship To Project Doctrine
 

@@ -25,7 +25,8 @@ It does not store private project facts. It provides public structure that can b
 4. Read `doctrine/index.md`.
 5. Read `doctrine/source-grounding.md` before writing project-native claims.
 6. Read `doctrine/spec-driven-development.md` before turning intent into feature, refactor, installer, or runtime work.
-7. Read the specific doctrine concept relevant to the task.
+7. If the project binds a Rail ledger, read that named ledger before selecting or changing live work.
+8. Read the specific doctrine concept relevant to the task.
 
 ## Core Rules
 
@@ -36,6 +37,9 @@ It does not store private project facts. It provides public structure that can b
 - Preserve open questions instead of filling gaps.
 - Record decisions only when reversal cost or future context justifies it.
 - Keep specification, plan, tasks, verification evidence, and handoff as separate roles when work is durable.
+- Treat specification task lists as implementation decomposition, not as a second live queue.
+- When Rail is bound, update only its named ledger for selection, ownership, dependencies, status, and completion evidence.
+- Do not create parallel boards, backlogs, queues, `now` files, status ledgers, or agent-local task authorities.
 - A handoff is continuity, not transcript.
 
 ## Before Writing
@@ -48,7 +52,8 @@ Before creating or editing a file:
 4. Reject private project memory, private source paths, client-sensitive facts, secrets, raw dumps, and product-specific operational state.
 5. Make the smallest coherent change.
 6. Read back the result.
-7. Report changed paths and commit SHAs.
+7. If the change advances live work, reconcile the canonical Rail item with evidence.
+8. Report changed paths and commit SHAs.
 
 ## Completion Standard
 

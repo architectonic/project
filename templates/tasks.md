@@ -9,6 +9,11 @@ status: draft
 
 # Tasks: [FEATURE NAME]
 
+> This file decomposes one specified change. It is not a project backlog or live
+> status authority. When Rail is present, link this artifact from one Rail item and
+> keep selection, ownership, dependencies between work items, status, and completion
+> evidence in the canonical ledger.
+
 **Input**: Design artifacts from [workstream path]
 
 **Prerequisites**: specification, plan, and any required research, contracts, data model, or quickstart.

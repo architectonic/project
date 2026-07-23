@@ -19,5 +19,9 @@ requireValue(Boolean(protocol.canonical_entry), "canonical_entry is required");
 requireValue(fs.existsSync(path.join(root, protocol.canonical_entry || "")), `missing canonical entry ${protocol.canonical_entry}`);
 const readme = fs.readFileSync(path.join(root, "README.md"), "utf8");
 requireValue(/status:\s*experimental/i.test(readme), "README must disclose experimental status");
+requireValue(/github\.com\/architectonic\/rail/i.test(readme), "README must link the Rail work contract");
+requireValue(/competing queues/i.test(readme), "README must reject parallel live queues");
+const agents = fs.readFileSync(path.join(root, "AGENTS.md"), "utf8");
+requireValue(/canonical Rail item|named ledger/i.test(agents), "AGENTS.md must bind live work to one Rail ledger");
 if (errors.length) { console.error(errors.join("\n")); process.exit(1); }
 console.log(`${pkg.name}@${pkg.version} protocol validation passed`);

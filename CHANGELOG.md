@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+- Define the boundary between project specifications and the canonical Rail work ledger.
+- Prevent plans, task files, roadmaps, handoffs, and status prose from becoming parallel live queues.
+- Add the optional Rail read and reconciliation steps to the project operating loop.
+
 ## 0.3.0
 
 - Clarify adaptive standalone use and the smallest justified composition.
